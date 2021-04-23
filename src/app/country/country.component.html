@@ -1,0 +1,21 @@
+<h3> Form!</h3>
+
+<hr />
+<form [formGroup]="CountrySearchForm" (ngSubmit)="onSubmit(CountrySearchForm.value)">
+  <div>
+    <label>
+      Country Name:
+    <input type="text" formControlName="name">
+    </label>
+  </div>
+  <div>
+    <label>
+      Country Code:
+    <input type="text" formControlName="countrycode">
+    </label>
+  </div>
+  <button class="button" type="submit">Submit</button>
+  <button class="button" type="reset" (click) ="onReset()">Reset</button>
+</form>
+ 
+{{country?.namecode}}
